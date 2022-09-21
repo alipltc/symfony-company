@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block head %} {% include ('admin/head.html.twig') %} {% endblock %}
+        <SCRIPT language="JavaScript" type="text/javascript">
+            function openWin( windowURL, windowname, windowFeatures ) {  window.open( windowURL, windowname, windowFeatures );}
+        </SCRIPT>
+        <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+    </head>
+    <body class="hold-transition sidebar-mini">
+    {% block header %}{% include ('admin/header.html.twig') %}{% endblock %}
+    {% block sidebar %}{% include ('admin/sidebar.html.twig') %}{% endblock %}
+    {% block body %}{% endblock %}
+    {% block footer %}{% include ('admin/footer.html.twig') %}{% endblock %}
+
+    </body>
+</html>

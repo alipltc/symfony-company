@@ -1,0 +1,75 @@
+
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Form</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form name="konu" method="post">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Menü veya Title İsmi</label>
+                <input type="text" id="konu_title" name="konu[title]" value="{{ konu.title }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Keywords</label>
+                <input type="text" id="konu_keywords" name="konu[keywords]" value="{{ konu.keywords }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Descriptions</label>
+                <input type="text" id="konu_description" name="konu[description]" value="{{ konu.description }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">yazar</label>
+                <input type="text" id="konu_yazar" name="konu[yazar]" value="{{ konu.yazar }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Detail</label>
+                <textarea id="editor" name="konu[detail]" rows="25" cols="100">{{ konu.detail }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">İmage</label>
+                <input type="text" id="konu_image" name="konu[image]" value="{{ konu.image }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Url</label>
+                <input type="text" id="konu_url" name="konu[url]" value="{{ konu.url }}" class="form-control" >
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Menü Id</label>
+                <select  name="konu[menu_id]" class="form-control">
+                    {% if (konname) %}
+                        <option value="{{ konu.menuid }}">{{ konname[0].title }}</option>
+                    {% endif %}
+                    {% for men in menus %}
+                        <option value="{{ men.id }}">{{ men.title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Status</label>
+                <select id="konu_status" name="konu[status]" value="{{ konu.status }}" class="form-control">
+                    <option>{{ konu.status }}</option>
+                    <option>True</option>
+                    <option>False</option>
+                </select>
+            </div>
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+</div>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+

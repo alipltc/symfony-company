@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mesaj index{% endblock %}
+
+{% block body %}
+    <h1>Mesaj index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Konu</th>
+                <th>Mesaj</th>
+                <th>Telefon</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mesaj in mesajs %}
+            <tr>
+                <td>{{ mesaj.id }}</td>
+                <td>{{ mesaj.name }}</td>
+                <td>{{ mesaj.email }}</td>
+                <td>{{ mesaj.konu }}</td>
+                <td>{{ mesaj.mesaj }}</td>
+                <td>{{ mesaj.phone }}</td>
+                <td>
+                    <a href="{{ path('admin_mesaj_show', {'id': mesaj.id}) }}">show</a>
+                    <a href="{{ path('admin_mesaj_edit', {'id': mesaj.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_mesaj_new') }}">Create new</a>
+{% endblock %}

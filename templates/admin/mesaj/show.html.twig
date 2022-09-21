@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mesaj{% endblock %}
+
+{% block body %}
+    <h1>Mesaj</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ mesaj.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ mesaj.name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ mesaj.email }}</td>
+            </tr>
+            <tr>
+                <th>Konu</th>
+                <td>{{ mesaj.konu }}</td>
+            </tr>
+            <tr>
+                <th>Mesaj</th>
+                <td>{{ mesaj.mesaj }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_mesaj_index') }}">back to list</a>
+
+    <a href="{{ path('admin_mesaj_edit', {'id': mesaj.id}) }}">edit</a>
+
+    {{ include('admin/mesaj/_delete_form.html.twig') }}
+{% endblock %}

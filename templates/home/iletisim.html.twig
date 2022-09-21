@@ -1,0 +1,103 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}Bluetech Bilgisayar | İletişim{% endblock %}
+{% block keywords %} Beylikdüzü Bluetech Bilgissyar,sunucu,network,bilişim,sistem,destek {% endblock %}
+{% block description %} Beylikdüzü Bluetech Bilgisayar Ve Yazılım Sanayi Ticaret Limited Şirketine ulaşabileceğiniz iletişim yolları. {% endblock %}
+
+{% block body %}
+    <div id="banner-area">
+        <img src="/images/banner/5.jpg" alt ="iletisim" />
+        <div class="parallax-overlay"></div>
+        <!-- Subpage title start -->
+        <div class="banner-title-content">
+            <div class="text-center">
+                <h2>İLETİŞİM</h2>
+                <ul class="breadcrumb">
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div><!-- Subpage title end -->
+    </div><!-- Banner area end -->
+
+    <!-- Main container start -->
+
+    <section id="main-container">
+        <div class="container">
+
+            <div class="row">
+                <!-- Map start here -->
+                <div id="map-wrapper" class="no-padding">
+                    <div class="map" id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8516.296293996516!2d28.674078064513484!3d41.00412984453389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd0641dba645be1ec!2zQVNUT04gYmV5bGlrZMO8esO8!5e0!3m2!1str!2str!4v1582452199286!5m2!1str!2str" width="1170" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div><!--/ Map end here -->
+
+            </div><!-- Content row  end -->
+
+            <div class="gap-40"></div>
+
+
+            <div class="row">
+                <div class="col-md-7">
+                    {{ include('messages.html.twig') }}
+                    <h4><label>BİZE MESAJ GÖNDERİN</label></h4>
+                    <form id="contact-form" name="mesaj" method="post" role="form">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input class="form-control" id="mesaj_name" name="mesaj[name]" placeholder="Ad Soyad" type="text" required="required">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input class="form-control" id="mesaj_email" name="mesaj[email]"
+                                           placeholder="Email" type="email"  required="required">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input class="form-control" id="mesaj_phone" name="mesaj[phone]"
+                                           placeholder="Telefon" type="text" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input class="form-control" id="mesaj_konu" name="mesaj[konu]"
+                                           placeholder="Konu"  required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="mesaj_mesaj" name="mesaj[mesaj]" placeholder="Mesajınızı Giriniz..." rows="7"  required="required"></textarea>
+                        </div>
+                        <div class="text-right"><br>
+                            <input type="hidden" name="token" value="{{ csrf_token('form-mesaj') }}" />
+                            <button class="btn btn-primary solid blank" type="submit">MESAJ GÖNDER</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="contact-info">
+                        <h3>İLETİŞİM BİLGİLERİ</h3>
+                        <p>Bize ulaşabileceğiniz iletişim bilgileri...</p>
+                        <br>
+                        <p><i class="fa fa-home info"></i>  Yakuplu Mah. 59 Sk. Aston Beylikdüzü No:40 B Blok D:6 - Beylikdüzü/İST </p>
+                        <p><i class="fa fa-phone info"></i>  (0212) 809 19 43-44 Pbx </p>
+                        <p><i class="fa fa-envelope-o info"></i>  info@bluetechbilgisayar.com</p>
+                        <p><i class="fa fa-globe info"></i>  www.bluetechbilgisayar.com</p>
+                        <p><a href="https://www.google.com/maps/place/ASTON+beylikd%C3%BCz%C3%BC/@41.004322,28.665297,15z/data=!4m5!3m4!1s0x0:0xd0641dba645be1ec!8m2!3d41.004322!4d28.6652971?hl=tr"><i class="fa fa-map-marker"></i>Haritaya Git</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--/ container end -->
+
+    </section><!--/ Main container end -->
+
+
+
+{% endblock %}

@@ -1,0 +1,162 @@
+{{ include('admin/messages.html.twig') }}
+
+<form class="forms-sample" method="post" name="setting">
+    <div class="card card-primary card-outline card-tabs">
+        <div class="card-header p-0 pt-1 border-bottom-0">
+            <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Genel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="false">Server</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">İletişim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-two-referans-tab" data-toggle="pill" href="#custom-tabs-two-referans" role="tab" aria-controls="custom-tabs-two-referans" aria-selected="false">Referanslar</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="tab-content" id="custom-tabs-two-tabContent">
+                <div class="tab-pane fade active show" id="custom-tabs-two-home" role="tabpanel" aria-labelledby="custom-tabs-two-home-tab">
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Adı</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[title]" value="{{ setting.title }}" class="form-control" placeholder="title">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Description</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[description]" value="{{ setting.description }}" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Keywords</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[keywords]" value="{{ setting.keywords }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Firma</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[company]" value="{{ setting.company }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Adres</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[address]" value="{{ setting.address }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Fax</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[fax]" value="{{ setting.fax }}" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Telefon</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[phone]" value="{{ setting.phone }}" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[email]" value="{{ setting.email }}" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2">Status(Durum) </label>
+                        <select id="setting_status" name="setting[status]" value="{{ setting.status }}" class="col-sm-3">
+                            <option>{{ setting.status }}</option>
+                            <option>True</option>
+                            <option>False</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="custom-tabs-two-profile" role="tabpanel" aria-labelledby="custom-tabs-two-profile-tab">
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">SMTP Server</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[smtpserver]" value="{{ setting.smtpserver }}" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">SMTP Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[smtpemail]" value="{{ setting.smtpemail }}" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">SMTP Password</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[smtppassword]" value="{{ setting.smtppassword }}" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-1 col-form-label">SMTP Port</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="setting[smtpport]" value="{{ setting.smtpport }}" class="form-control" >
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
+                    <div class="form-group">
+                        <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Hakkımızda</label>
+                        <div class="col-sm-9">
+                            <textarea id="detail" name="setting[aboutus]">{{ setting.aboutus }}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="custom-tabs-two-settings" role="tabpanel" aria-labelledby="custom-tabs-two-settings-tab">
+                    <div class="form-group">
+                        <label for="exampleInputEmail2" class="col-sm-2 col-form-label">İletişim</label>
+                        <div class="col-sm-9">
+                            <textarea id="hakkımda" name="setting[contact]">{{ setting.contact }}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="custom-tabs-two-referans" role="tabpanel" aria-labelledby="custom-tabs-two-referans-tab">
+                    <div class="form-group">
+                        <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Referanslar</label>
+                        <div class="col-sm-9">
+                            <textarea id="ref" name="setting[referances]">{{ setting.referances }}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-success mr-2">Ekle</button>
+
+</form>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#detail' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#hakkımda' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#ref' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>

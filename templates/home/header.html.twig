@@ -1,0 +1,67 @@
+
+
+<header id="header" class="navbar-fixed-top header2" role="banner">
+    <div class="container">
+        <div class="row">
+            <!-- Logo start -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                    <a href="/">
+                        <img class="img-responsive" src="/images/logoma.png" alt="logo">
+                    </a>
+                </div>
+            </div><!--/ Logo end -->
+            <nav class="collapse navbar-collapse clearfix" role="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="/Kurumsal" class="dropdown-toggle">KURUMSAL</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                {% for cat in catlist %}
+                                    <li><a href="/Kurumsal/{{cat.url}}">{{cat.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/Cozumlerimiz" class="dropdown-toggle">ÇÖZÜMLERİMİZ</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                {% for cat in catlist3 %}
+                                    <li><a href="/Cozumlerimiz/{{cat.url}}">{{cat.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/Hizmetlerimiz" class="dropdown-toggle">HİZMETLERİMİZ</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                {% for cat in catlist4 %}
+                                    <li><a href="/Hizmetlerimiz/{{cat.url}}">{{cat.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/Referanslarimiz">REFERANSLARIMIZ</a></li>
+                    <li><a href="/iletisim">İLETİŞİM</a></li>
+                    <li>
+                        <p></p>
+                        <div class="team-social">
+                            <a class="fb" href="https://www.facebook.com/Bluetech-Bilgisayar-100660611430953/?modal=admin_todo_tour"><i class="fa fa-facebook"></i></a>
+                            <a class="twt" href="https://twitter.com/BluetechPC"><i class="fa fa-twitter"></i></a>
+                            <a class="linkdin" href="https://www.linkedin.com/in/bluetech-bilgisayar-156267199/"><i class="fa fa-linkedin"></i></a>
+                            <a class="dribble" href="https://www.instagram.com/bluetechbilgisayar/?hl=tr"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </nav><!--/ Navigation end -->
+        </div><!--/ Row end -->
+    </div><!--/ Container end -->
+</header><!--/ Header end -->

@@ -1,0 +1,72 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}Bluetech Bilgisayar | {{ data[0].title }}{% endblock %}
+{% block keywords %}{{ data[0].keywords }}{% endblock %}
+{% block description %}{{ data[0].description }} {% endblock %}
+
+{% block body %}
+<div id="banner-area">
+    <img src="/images/banner/blogdetail.jpg" alt ="blogdetail" />
+    <div class="parallax-overlay"></div>
+    <!-- Subpage title start -->
+    <div class="banner-title-content">
+        <div class="text-center">
+            {% for dat in data %}
+            <h2>{{ dat.title }}</h2>
+            <ul class="breadcrumb">
+                <li><a href="/">Anasayfa</a></li>
+                <li><a href="{{ dat.title }}"> {{ dat.title }}</a></li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+
+<!-- Main container start -->
+
+<section id="main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                {% for dat in data %}
+                <div class="post-content">
+                    <div class="">
+                        <img src="/images/blog/{{ dat.image }}" class="img-responsive" height="300px"/>
+                    </div><!-- post image end -->
+                    <h4>{{ dat.title }}</h4>
+
+                    <p> {{dat.detail|raw}} </p>
+
+                </div><!--/ post content end -->
+                {% endfor %}
+
+            </div><!--/ Content col end -->
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="sidebar sidebar-right">
+                    <!-- category start -->
+                    <div class="widget widget-categories">
+                        <h3 class="widget-title">Menü</h3>
+                        <ul class="category-list clearfix">
+                            <li><a href="/Kurumsal">Kurumsal</a><span class="posts-count"></span></li>
+                            <li><a href="/Cozumlerimiz">Çözümlerimiz</a><span class="posts-count"></span></li>
+                            <li><a href="/Hizmetlerimiz">Hizmetlerimiz</a><span class="posts-count"></span></li>
+                            <li><a href="/Referanslarımız">Referanslarımız</a><span class="posts-count"></span></li>
+                            <li><a href="/iletisim">İletişim</a><span class="posts-count"></span></li>
+                        </ul>
+                    </div><!-- category end -->
+
+
+
+                </div><!--/ Sidebar end -->
+            </div><!--/ Sidebar col end -->
+        </div><!--/ row end -->
+    </div><!--/ container end -->
+</section><!--/ Main container end -->
+
+
+
+
+
+
+{% endblock %}

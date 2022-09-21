@@ -1,0 +1,47 @@
+php
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Form</h3>
+    </div>
+
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form name="menu" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Parent Id</label>
+                <select id="menu_parentid" name="menu[parentid]" class="form-control">
+                <option value="0">Ana Menü</option>
+                {% for man in menu %}
+                     <option value="{{ man.id }}" {{ man.id==menu.parentid ? ' Selected': '' }}>{{ man.title }}</option>
+                {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Menü veya Title İsmi</label>
+                <input type="text" id="menu_title" name="menu[title]" value="{{ menu.title }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Keywords</label>
+                <input type="text" id="menu_keywords" name="menu[keywords]" value="{{ menu.keywords }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Descriptions</label>
+                <input type="text" id="menu_description" name="menu[description]" value="{{ menu.description }}" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Status</label>
+                <select id="menu_status" name="menu[status]" value="{{ menu.status }}" class="form-control">
+                    <option>{{ menu.status }}</option>
+                    <option>True</option>
+                    <option>False</option>
+                </select>
+            </div>
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary" >Tamamla</button>
+        </div>
+    </form>
+</div>

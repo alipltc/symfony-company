@@ -1,0 +1,264 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}{{ data[0].title }}{% endblock %}
+{% block keywords %}{{ data[0].keywords }}{% endblock %}
+{% block description %}{{ data[0].description }} {% endblock %}
+{% block body %}
+    {% block slider %}{% include ('home/slider.html.twig') %}{% endblock %}
+    <!-- About tab start -->
+    <section id="about" class="about angle">
+        <div class="container">
+            <div class="row">
+                <div class="landing-tab clearfix">
+                    <ul class="nav nav-tabs nav-stacked col-md-3 col-sm-5">
+                        <li class="active">
+                            <a class="animated fadeIn" href="#tab_a" data-toggle="tab">
+                                <span class="tab-icon"><i class="fa fa-briefcase"></i></span>
+                                <div class="tab-info">
+                                    <h3>ŞİRKETİMİZ</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="animated fadeIn" href="#tab_b" data-toggle="tab">
+                                <span class="tab-icon"><i class="fa fa-question"></i></span>
+                                <div class="tab-info">
+                                    <h3>NEDEN BİZ?</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="animated fadeIn" href="#tab_c" data-toggle="tab">
+                                <span class="tab-icon"><i class="fa fa-support"></i></span>
+                                <div class="tab-info">
+                                    <h3>BT DESTEK</h3>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content col-md-9 col-sm-7">
+                        <div class="tab-pane active animated fadeInRight" id="tab_a">
+                            <i class=""></i>
+                            <h3>ŞİRKETİMİZ</h3>
+                            <p>Bluetech Bilgisayar sistemleri özel ve resmi kurum ve kuruluşlara kullandıkları iletişim ve bilişim teknolojilerini sorunsuz ve performanslı şekilde kullanmaları için alt yapı oluşturarak kurulan alt yapı ile beraber gerçekleştirilen projeleri hayata geçirerek bu projeleri geliştirmek, yönetmek ve devamlılığını sağlamak amacıyla kurulmuştur. Kurulumundan bu güne dünyada ki en yeni bilişim teknolojilerini müşterileri için takip etmekte ve bu süreçte elde edilen bilgi , birikim, tecrübelerini müşterilerinin sorunlarının çözümleri için geliştirmektedir. Bilişim sektöründe 10 yılı aşan süredir yer alan tecrübeli ve uzman kadrosu ile müşterilerine çözüm odaklı yaklaşımı ve çağdaş bir yönetim anlayışı ile hizmet vermektedir. Bluetech Bilgisayar Sistemleri yer bağımsız birçok projeyi, konusunda uzman kadrosuyla müşterilerine sorunsuz bir şekilde teslim etmiştir .</p>
+                        </div>
+                        <div class="tab-pane animated fadeIn" id="tab_b">
+                            <i class=""></i>
+                            <h3>BLUETECH BİLGİSAYAR</h3>
+                            <p>Bluetech, uzun soluklu müşteri sadakatinin sağlanmasına yönelik planlama ve uygulama yapmaktadır. Müşteri taleplerini ve sorunlarını sahiplenerek, Hızlı, sorunsuz ve kaliteli hizmet ilkeleri ile % 100 müşteri memnuniyeti hedeflemektedir. Müşterilerinin beklentilerini ön planda tutan, doğru yaklaşımları, Pratik, ve akılcı fikirleriyle müşterisinin pazar rekabetinde fark yaratmasına yardımcı olur.
+                                Hizmetini yürüttüğü müşterisi ile Bluetech Bilgisayar ilişkisi, en başından beri iyi bir ortaklık ilişkisidir. Alanlarında tecrübeli, uzman ve genç kadrosuyla hızlı ve özenli hizmet konusunda tecrübelidir. Ortak misyonu, sizinle aynı markanın başarısı için çalışmaktır. Faaliyet gösterdiği hizmet sektöründeki temel ihtiyaç ve beklentilerin tek noktadan çözümünü sağlamakla beraber, donanım ve yazılım alanlarındaki çalışma faaliyetlerini ayrı merkezlerinde bağımsız olarak yürütmektedir. Bluetech , faaliyetlerinden elde ettiği kazançların önemli bir bölümünü ARGE’ye ayırmaktadır. Yani yatırımlarını yine iş geliştirmesine yapmaktadır. En iyi bildiğimiz işi yapıyoruz ! Sektör bağımsız platformlarda alanında uzman birçok firma ile başarılı projeler üreten iş ortaklıklarına imza atmıştır.</p>
+                        </div>
+                        <div class="tab-pane animated fadeIn" id="tab_c">
+                            <i class=""></i>
+                            <h3>HIZLI DESTEK</h3>
+                            <p>Bluetech Bilgisayar Sistemleri olarak kurumsal firmalar için BT Danışmanlık & Destek hizmetleri sağlamaktayız.</p><h5>KİMLER SÖZLEŞMELİ DESTEK HİZMETİ ALMALI ?</h5><p>
+                                İşletmesinde bilgi işlem envanterinde ki donanımlarda (sunucu, bilgisayar, yazıcı, yedekleme ünitesi, erişim noktası, modem, vb.) meydana gelen sorunların çözümünde zaman kaybına tahammülü olmayan tüm işletmeler Kurumsal Bakım Anlaşması yaptırabilirler.</p>
+                        </div>
+                    </div><!-- tab content -->
+                </div><!-- Overview tab end -->
+            </div><!--/ Content row end -->
+        </div><!-- Container end -->
+    </section><!-- About end -->
+    <!-- Service box start -->
+    <!-- İsteye göre eklenebilir... -->
+    <!-- Feature box start -->
+    <!-- İsteye göre eklenebilir... -->
+    <section id="image-block" class="image-block no-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 ts-padding" style="height:650px;background:url(/images/image-block-bg.jpg) 50% 50% / cover no-repeat;">
+                </div>
+                <div class="col-md-6 ts-padding img-block-right">
+                    <div class="img-block-head text-center">
+                        <h2>ŞİRKETİMİZ HAKKINDA DAHA FAZLA BİLGİ EDİNİN</h2>
+                        <h3>BLUETECH HİZMETLERİMİZ</h3>
+                        <p>Bluetech Bilgisayar olarak bir çok alanda hizmet vermekteyiz.</p>
+                    </div>
+                    <div class="gap-30"></div>
+                    <div class="image-block-content">
+                        <span class="feature-icon pull-left" ><i class="fa fa-support"></i></span>
+                        <div class="feature-content">
+                            <h3>BT DESTEK</h3>
+                            <p>Hızlı Destek Hizmeti</p>
+                        </div>
+                    </div><!--/ End 1st block -->
+                    <div class="image-block-content">
+                        <span class="feature-icon pull-left" ><i class="fa fa-codepen"></i></span>
+                        <div class="feature-content">
+                            <h3>PROJE YÖNETİMİ</h3>
+                            <p>Proje Kurulumu ve Yönetim Hizmeti</p>
+                        </div>
+                    </div><!--/ End 1st block -->
+                    <div class="image-block-content">
+                        <span class="feature-icon pull-left" ><i class="fa fa-desktop"></i></span>
+                        <div class="feature-content">
+                            <h3>ONARIM VE GARANTİ</h3>
+                            <p>Ürün ve Hizmet Onarımı ve Garantisi</p>
+                        </div>
+                    </div><!--/ End 1st block -->
+                    <div class="image-block-content">
+                        <span class="feature-icon pull-left" ><i class="fa fa-newspaper-o"></i></span>
+                        <div class="feature-content">
+                            <h3>LİSANSLAMA</h3>
+                            <p>Ürün ve Diğer Lisanslama Çözümleri</p>
+                        </div>
+                    </div><!--/ End 1st block -->
+                </div>
+            </div>
+        </div>
+    </section><!--/ Image block end -->
+    <section class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BEKLEMEYİN VE HEMEN BİR TEKLİF ALIN...</font></font></h3>
+                    <a href="/iletisim" class="pull-right btn btn-primary white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEKLİF AL</font></font></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients start -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <div class="row wow fadeInLeft">
+                <div id="client-carousel" class="col-sm-12 owl-carousel owl-theme text-center client-carousel">
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/aruba.png" alt="aruba" title="aruba"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 1 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/eset.png" alt="eset" title="eset"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 2 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/hp.png" alt="hp" title="hp"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 3 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/berqnett.png" alt="berqnet" title="berqnet"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 4 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/hpent.png" alt="hpent" title="hpent"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 5 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/ibm.png" alt="ibm" title="ibm"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 6 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/kaspersky.png" alt="kaspersky" title="kaspersky"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 7 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/microsoft.png" alt="microsoft" title="microsoft"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 7 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/qnapp.png" alt="qnap" title="qnap"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 7 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/shadow.png" alt="shadow" title="shadow"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 7 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/sophos.png" alt="sophos" title="sophos"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 7 end -->
+                    <div class="col-sm-3 portfolio-static-item">
+                        <div class="grid">
+                            <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                                <div class="">
+                                    <a class="thumb-holder">
+                                        <span class="service-image"> <img src="images/slider2/wmwaree.png" alt="wmware" title="wmware"></span>
+                                    </a>
+                                </div><!--/ grid end -->
+                            </div><!--/ item 1 end -->
+                        </div><!--/ grid end -->
+                    </div><!--/ item 7 end -->
+
+                </div><!-- Owl carousel end -->
+            </div><!-- Main row end -->
+        </div><!--/ Container end -->
+    </section><!--/ Clients end -->
+
+</div><!-- Body inner end -->
+{% endblock %}

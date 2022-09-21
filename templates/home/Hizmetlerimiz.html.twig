@@ -1,0 +1,52 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}Bluetech Bilgisayar | {{ menulist[2].title }}{% endblock %}
+{% block keywords %}{{ menulist[2].keywords }}{% endblock %}
+{% block description %}{{ menulist[2].description }}{% endblock %}
+
+{% block body %}
+    <div id="banner-area">
+        <img src="/images/banner/hizmetlerimiz.jpg" alt ="hizmetlerimiz" />
+        <div class="parallax-overlay"></div>
+        <!-- Subpage title start -->
+        <div class="banner-title-content">
+            <div class="text-center">
+                <h2>HİZMETLERİMİZ</h2>
+                <ul class="breadcrumb">
+                    <li><a href="/">Anasayfa</a></li>
+                    <li><a href="/Hizmetlerimiz">Hizmetlerimiz</a></li>
+                </ul>
+            </div>
+        </div><!-- Subpage title end -->
+    </div><!-- Banner area end -->
+
+
+    <!-- Portfolio start -->
+    <section id="main-container" class="portfolio-static">
+        <div class="container">
+            <div class="row">
+                {% for cat in catlist4 %}
+                <div class="col-md-6 col-sm-6 wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible;-webkit-animation-delay: .5s; -moz-animation-delay: .5s; animation-delay: .5s;">
+                    <div class="">
+                        <a class="thumb-holder" href="/Hizmetlerimiz/{{ cat.url }}">
+                           <span class="service-image">
+                               <img src="images/blog/{{ cat.image }}" alt="" width="550" height="250" title="{{ cat.title }}">
+                           </span>
+
+                        </a>
+                        <div class="portfolio-static-desc">
+                            <h4 style="text-align: center">{{ cat.title }}</h4>
+                            <span></span>
+                        </div>
+                    </div><!--/ grid end -->
+                </div><!--/ item 1 end -->
+                {% endfor %}
+
+            </div>
+        </div><!-- Container end -->
+    </section><!-- Portfolio end -->
+
+    <div class="gap-40"></div>
+
+
+{% endblock %}
